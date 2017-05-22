@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_daily"
+        android:icon="@drawable/sun"
+        android:title="daily" />
+
+    <item
+        android:id="@+id/navigation_weekly"
+        android:icon="@drawable/weekly"
+        android:title="weekly" />
+
+    <item
+        android:id="@+id/navigation_venture"
+        android:icon="@drawable/ventures"
+        android:title="venture" />
+
+</menu>
