@@ -13,7 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.83"
+        android:layout_weight="0.97"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
@@ -36,24 +36,31 @@
 
         <EditText
             android:id="@+id/task"
-            android:layout_width="0dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/progressBar1"
             android:layout_toLeftOf="@+id/date"
-            android:hint="Add Task"
-            android:imeOptions="actionNext" />
+            android:hint="Add Task" />
 
-        <Spinner
+        <Button
             android:layout_alignParentEnd="true"
-            android:id="@id/date"
+            android:id="@+id/saveTask"
             android:layout_width="96dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/task"
+            android:layout_height="20dp"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/p rogressBar1"
-            android:inputType="date"
-            android:onClick="showDatePickerDialog" />
+            android:layout_below="@+id/progressBar1"
+            android:onClick="submitTask"
+            android:layout_alignBottom="@id/task" />
+
+        <Button
+            android:layout_alignParentEnd="true"
+            android:id="@+id/viewtaskbutton"
+            android:layout_width="250dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:onClick="viewTask"
+            android:layout_below="@+id/task" />
 
     </RelativeLayout>
 
