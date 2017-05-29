@@ -20,12 +20,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+
 public class MainActivity extends Activity {
 
     private TextView mTextMessage;
     ProgressBar prg;
     EditText editText;
     TextView textView;
+
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -57,12 +59,18 @@ public class MainActivity extends Activity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        prg = (ProgressBar) findViewById(R.id.progressBar1);
+
+
+
+        prg = (ProgressBar) findViewById(R.id.hpbar);
+        prg = (ProgressBar) findViewById(R.id.expbar);
+
         editText = (EditText)findViewById((R.id.task));
         textView = (TextView) findViewById(R.id.viewtaskbutton);
 
 
     }
+
 
     public void submitTask(View view){
         String Message = editText.getText().toString();
