@@ -19,7 +19,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+
 
 public class MainActivity extends Activity {
 
@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
     ProgressBar prg;
     EditText editText;
     TextView textView;
-//    private ArrayList<String> = new ArrayList<String>();
+
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -59,27 +59,18 @@ public class MainActivity extends Activity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+
+
+
         prg = (ProgressBar) findViewById(R.id.hpbar);
         prg = (ProgressBar) findViewById(R.id.expbar);
+
         editText = (EditText)findViewById((R.id.task));
         textView = (TextView) findViewById(R.id.viewtaskbutton);
 
 
     }
-//        public void submitTask(View view){
-//        String Message = editText.getText().toString();
-//        String filename = "data";
-//        try {
-//            FileOutputStream fileOutputStream = openFileOutput(filename, MODE_PRIVATE);
-//            fileOutputStream.write(Message.getBytes());
-//            fileOutputStream.close();
-//            Toast.makeText(getApplicationContext(),"Task Created", Toast.LENGTH_LONG).show();
-//        } catch( FileNotFoundException e ){
-//            e.printStackTrace();
-//        } catch(IOException e){
-//            e.printStackTrace();
-//        }
-//    }
+
 
     public void submitTask(View view){
         String Message = editText.getText().toString();

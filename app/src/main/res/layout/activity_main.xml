@@ -86,6 +86,31 @@
             android:id="@+id/task"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/progressBar1"
+            android:layout_toLeftOf="@+id/date"
+            android:hint="Add Task" />
+
+        <Button
+            android:layout_alignParentEnd="true"
+            android:id="@+id/saveTask"
+            android:layout_width="96dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/progressBar1"
+            android:onClick="submitTask"
+            android:layout_alignBottom="@id/task" />
+
+        <Button
+            android:layout_alignParentEnd="true"
+            android:id="@+id/viewtaskbutton"
+            android:layout_width="250dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:onClick="viewTask"
+            android:layout_below="@+id/task" />
+
             android:hint="Add Task"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
@@ -103,6 +128,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/task" />
+
 
         <Button
             android:id="@+id/viewtaskbutton"
