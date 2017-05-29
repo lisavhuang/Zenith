@@ -17,53 +17,106 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
-        <ProgressBar
-            android:id="@+id/progressBar1"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="287dp"
+        <ImageView
+            android:id="@+id/phone_icon"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="73dp"
-            android:layout_marginStart="73dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="500dp"
+            android:maxHeight="500dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/pixel_cactus"
+            android:layout_alignBottom="@+id/expbar"
+            android:layout_toLeftOf="@+id/hptitle"
+            android:layout_toStartOf="@+id/hptitle"
+            android:paddingRight="16dp"/>
+
+        <TextView
+            android:id="@+id/hptitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:text="hp"
+            android:layout_above="@+id/exptitle"
+            android:layout_alignParentRight="true"
+            android:layout_alignLeft="@+id/hpbar"
+            android:layout_alignStart="@+id/hpbar" />
+
+        <ProgressBar
+            android:id="@+id/hpbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
             android:indeterminate="false"
             android:max="100"
-            android:minHeight="50dp"
+            android:minHeight="20dp"
             android:minWidth="200dp"
-            android:progress="1" />
+            android:progress="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/exptitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hpbar"
+            android:layout_alignLeft="@+id/hpbar"
+            android:layout_alignStart="@+id/hpbar"
+            android:layout_marginBottom="23dp"
+            android:text="exp" />
+        <ProgressBar
+            android:id="@+id/expbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="100"
+            android:minHeight="20dp"
+            android:minWidth="200dp"
+            android:progress="1"
+            android:layout_below="@+id/hptitle"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="19dp" />
 
 
         <EditText
             android:id="@+id/task"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:hint="Add Task"
+            android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/progressBar1"
-            android:layout_toLeftOf="@+id/date"
-            android:hint="Add Task" />
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/saveTask"
+            android:layout_toStartOf="@+id/saveTask" />
+
 
         <Button
-            android:layout_alignParentEnd="true"
             android:id="@+id/saveTask"
             android:layout_width="96dp"
             android:layout_height="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/progressBar1"
             android:onClick="submitTask"
-            android:layout_alignBottom="@id/task" />
+            android:layout_above="@+id/viewtaskbutton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/task" />
 
         <Button
-            android:layout_alignParentEnd="true"
             android:id="@+id/viewtaskbutton"
             android:layout_width="250dp"
-            android:layout_height="20dp"
-            android:layout_centerHorizontal="true"
+            android:layout_height="15dp"
             android:onClick="viewTask"
-            android:layout_below="@+id/task" />
+            android:layout_below="@+id/task"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
 
     </RelativeLayout>
-
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -72,6 +125,4 @@
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/navigation" />
-
-
 </LinearLayout>
